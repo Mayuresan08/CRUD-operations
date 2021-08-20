@@ -31,7 +31,7 @@ a.forEach(b =>
  <div class="shareContainer"> 
       <div><img class=profile id=image src=${b.avatar}></div>                  
        <div ><p id="name" > ${b.name}</p><p id="date">${tdate}</p></div>
-      <div>
+      <div class="shareButtons">
         <div><button  class=" btn button" data-toggle="modal" data-target="#editModal" onclick="editModal(${b.id})">Edit</button></div>
         <div><button class=" btn button" onclick="deleteUser(${b.id})">Delete</button></div>
       </div>                            
