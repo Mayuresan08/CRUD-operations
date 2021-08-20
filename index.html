@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+</head>
+<style>
+    body{
+    background-color:lightsalmon;
+}
+#myModal{
+display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:1;
+width:100%;
+ height:100%;
+  background-color:rgba(0,0,0,0.5)
+}
+#modal-content{
+   background-color:lightsalmon;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  margin-top:7rem;
+}
+.close1{
+  float:right;
+  font-size:2rem;
+  cursor:pointer;
+}
+.add-user{
+  position:relative;
+  top:2rem;
+  left:2rem;
+}
+#container{
+      background-color: lightsalmon;
+      overflow: hidden;
+      border-radius:10px 10px 10px10px; 
+    }
+
+    .shareContainer{
+     background-color: lightcoral;
+     max-width:40rem;
+     display:flex ;
+     align-items: center;
+     gap:3rem;
+      margin-top:2rem;
+     border-radius:30px;
+   }
+   .profile{
+      gap: 1rem;
+      align-items: center;
+      padding: 0.5rem; 
+      border-radius: 50%;
+     
+    }
+    #name{
+        color:hsl(217, 19%, 35%) ;
+      font-size:1.5rem;
+    }
+#date{
+  color:hsl(217, 19%, 35%) ;
+  margin-top:-0.8rem;
+}
+.button{
+  background-color:lightsalmon;
+  color:hsl(217, 19%, 35%);
+  font-size:1rem;
+  margin-bottom:1rem;
+  width:5rem;
+  border-radius:20%;
+    border:2px solid hsl(217, 19%, 35%);
+  cursor:pointer;
+}
+
+.button:hover{
+  background-color:lightcoral;
+}
+</style>
+<body>
+ 
+
+
+  
+        <button class="button" id="add-user">Add User</button>
+      <div class="modal1" id="myModal">
+        <div id="modal-content">
+          <span class="close1">&times;</span>
+    <div>    <h4>Enter details to add</h4>
+            <label for="fname">Name</label>
+            <input type="textbox" id="username" ><br><br>
+            <label for="avatar">Avatar</label>
+            <input type="textbox" id="avatar" ><br><br>
+            <button class="  button" type="submit"  onclick="addUser()">send</button>
+              </form>
+              </div>   
+        </div>
+      </div>
+   
+        <div id=container>
+          <div id=shareCointainer></div>
+        </div>
+        <div class="modal" id="editModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="modal-title">Edit Details</div>
+                <button class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <label for="username1">Name</label>
+                <input type="textbox" id="username1" ><br><br>
+                <label for="avatar1">Avatar</label>
+                <input type="textbox" id="avatar1" ><br><br>
+                <button class="  btn" type="submit" onclick="editUser()"  data-dismiss="modal"  >send</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <div>
+    
+    
+
+<script src="script.js"></script
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+  crossorigin="anonymous"></script>
+</body>
+</html>
